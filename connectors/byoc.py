@@ -525,7 +525,7 @@ class Connector(ESDocument):
             if_primary_term=self._primary_term,
         )
 
-    async def mark_error(self, error):
+    async def error(self, error):
         doc = {
             "status": Status.ERROR.value,
             "error": str(error),
